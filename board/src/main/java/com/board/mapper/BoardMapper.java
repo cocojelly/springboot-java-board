@@ -18,6 +18,9 @@ public interface BoardMapper {
 	
 	// 글 보기
 	public Boardlist boardView(int board_id)throws Exception;
+
+	// 글 보기
+	public Boardlist boardrecentView()throws Exception;
 	
 	// 조회수 증가
 	public void hitPlus(int board_id)throws Exception;

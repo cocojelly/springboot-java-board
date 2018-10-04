@@ -6,9 +6,6 @@
 <html lang="ko">
 <head>
 <meta http-equiv="Content-Type" content= "text/html; charset=UTF-8">
-<!-- BootStrap CDN -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"> -->
 <link rel="stylesheet" href="/resources/css/style.css">
 <title>Board Service</title>
 </head>

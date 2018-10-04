@@ -22,6 +22,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     	select * from testboard where board_id = #{board_id}
     </select>
     
+    <select id="boardrecentView" resultType="com.board.domain.Boardlist">
+    	select * from testboard where board_id = (select max(board_id)as board_id from testboard)
+    </select>
+    
     <update id="hitPlus" parameterType="int">
     	update testboard set hits = hits + 1 where board_id = #{board_id}
     </update>
@@ -31,9 +35,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </update>
     
     <delete id="boardDelete" parameterType="int">
-    	delete from testboard where board_id=#{board_id}
-<!--		alter table testboard AUTO_INCREMENT=1
-	  	set @CNT = 0
-	   	update testboard set testboard.board_id = @CNT:=@CNT+1 -->
+    	delete from testboard where board_id = #{board_id};
+<!-- 	alter table testboard AUTO_INCREMENT=1;
+	   	set @CNT = 0;
+	   	update testboard set testboard.board_id = @CNT:=@CNT+1; -->
     </delete>
 </mapper>
